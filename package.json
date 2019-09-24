@@ -87,12 +87,17 @@
     "style-loader": "^1.0.0"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "set PORT=9000 && react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "no-undef": "off",
+      "no-restricted-globals": "off",
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": {
     "production": [

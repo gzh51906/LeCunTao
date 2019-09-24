@@ -6,17 +6,17 @@ const {
 
 
 module.exports = override(
-    module({
-        rules: [
-            {
-                test: /\.css$/i,
-                loader: 'css-loader',
-                options: {
-                    modules: true,
-                },
-            },
-        ],
-    }),
+    // module({
+    //     rules: [
+    //         {
+    //             test: /\.css$/i,
+    //             loader: 'css-loader',
+    //             options: {
+    //                 modules: true,
+    //             },
+    //         },
+    //     ],
+    // }),
     fixBabelImports("import", {
         libraryName: "antd", libraryDirectory: "es", style: true // change importing css to less
     }),
