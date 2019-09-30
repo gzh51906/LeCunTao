@@ -1,18 +1,20 @@
-LeCunTao
-项目名称:乐村淘
-git仓库地址
+# LeCunTao
 
-https://github.com/gzh51906/LeCunTao.git
-团队与分工
+## 项目名称:乐村淘 
 
-组长:邵展荣 组员:邢福谦,陈燕伟,何启维
-负责模块
-邵展荣:搭建项目,后台管理系统
-邢福谦:个人页,登陆注册页,列表页,详情页
-陈燕伟:分类页
-何启维:首页
-项目目录说明
+* git仓库地址
+    * https://github.com/gzh51906/LeCunTao.git
 
+* 团队与分工
+    * 组长:邵展荣 组员:邢福谦,陈燕伟,何启维
+    * 负责模块
+        * 邵展荣:搭建项目,后台管理系统
+        * 邢福谦:个人页,登陆注册页,列表页,详情页
+        * 陈燕伟:分类页
+        * 何启维:首页
+
+* 项目目录说明
+```
 ├── build
 |  ├── asset-manifest.json
 |  ├── favicon.ico
@@ -70,6 +72,10 @@ https://github.com/gzh51906/LeCunTao.git
 |  ├── redux
 |  └── serviceWorker.js
 └── yarn.lock
-项目页面截图
-
-Image text Image text Image text Image text
+```
+* 项目页面截图
+    * 
+    ![Image text](./src/doc/home.png)
+    ![Image text](./src/doc/cart.png)
+    ![Image text](./src/doc/login.png)
+    ![Image text](./src/doc/list.png)
