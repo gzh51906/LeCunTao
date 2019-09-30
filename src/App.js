@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
-import { Tabs, Menu, Icon } from "antd";
+import { Menu, Icon , BackTop  } from "antd";
 import "./App.css";
+
+
 
 // 引入底部导航栏菜单
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Classify from "./pages/Classify";
 import Mine from "./pages/Mine";
-
-// const { TabPane } = Tabs;
+// 引入其他页面
+import List from "./pages/List";
+import Detail from "./pages/Details";
+import Login from "./pages/login";
+import Reg from "./pages/reg";
 
 class App extends Component {
   constructor() {
@@ -27,7 +32,7 @@ class App extends Component {
         {
           text: "分类",
           name: "classify",
-          icon: "search",
+          icon: "appstore",
           path: "/classify"
         },
         {
@@ -46,41 +51,64 @@ class App extends Component {
     };
   }
 
-  componentWillMount() {
-    // console.log(this.props);
+  
+  componentDidMount(){
     let key = this.props.location.pathname;
-    // console.log("key", key);
+    console.log("key", key);
     // 重定向默认高亮不生效
     if (key !== "/") {
       this.setState({
         current: key
       });
     }
+    let menu = document.querySelector('#menu')
+    
+      if(key === '/home' || key === '/classify' || key === '/cart' || key === '/mine') {
+        menu.style.display = 'block';
+      }else{
+        menu.style.display = 'none';
+    }
   }
   componentWillReceiveProps() {
     // // 获取url地址
     let { pathname } = this.props.history.location;
-    console.log(pathname)
+    console.log('pathname',pathname)
     // 把url地址赋值到state中
     this.setState({
       current: pathname
     });
+    let menu = document.querySelector('#menu')
+        if(pathname === '/home' || pathname === '/classify' || pathname === '/cart' || pathname === '/mine') {
+          menu.style.display = 'block';
+        }else{
+          menu.style.display = 'none';
+        }
   }
-
-  goto = ({ key }) => {
-    // console.log({key})
-    this.setState({
-      current: key
-    });
-    // 获取history
+  // 底部导航栏跳转
+  goto = ({ key }) => { 
     this.props.history.push(key);
-    // this.props.history.replace(key)
-    // console.log(this.props)
   };
 
   render(){
+    let token = localStorage.getItem('authorization')
+    console.log('token',token)
     return (
       <div className="App">
+        <BackTop>
+          <div className="ant-back-top-inner"
+              style={{
+                height: '40px',
+                width: '40px',
+                lineHeight: '40px',
+                borderRadius: '20px',
+                backgroundColor: '#1088e9',
+                color:'#fff',
+                textAlign: 'center',
+                fontSize: '20px'
+              }}
+          ><Icon type="arrow-up" /></div>
+        </BackTop>
+        
         <Menu
           className="menu"
           onClick={this.goto}
@@ -96,7 +124,7 @@ class App extends Component {
             );
           })}
         </Menu>
-        
+          
 
         <Switch>
           {/* 首页 */}
@@ -114,6 +142,24 @@ class App extends Component {
           {/* 个人中心 */}
 
           <Route path="/mine" component={Mine} />
+
+          {/* 列表页 */}
+
+          <Route path="/list" component={List} />
+
+          {/* 详情页 */}
+
+          <Route path="/detail/:id" component={Detail} />
+
+          {/* 登录页 */}
+
+          <Route path="/login" component={Login} />
+
+          {/* 注册页 */}
+
+          <Route path="/reg" component={Reg} />
+
+          
           {/* 重定向加精准确定到home界面 */}
 
           <Redirect from="/" to="/home" exact />
@@ -135,6 +181,5 @@ class App extends Component {
     );
   }
 }
-
 App = withRouter(App);
 export default App;
