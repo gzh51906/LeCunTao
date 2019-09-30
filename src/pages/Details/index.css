@@ -1,0 +1,79 @@
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 300px;
+    line-height: 375px;
+    /* background: #364d79; */
+    overflow: hidden;
+}
+.ant-carousel .slick-slide h3 {
+    color: #fff;
+}
+
+.desgoods{
+    background: #fff;
+    padding-left: 10px;
+}
+.desgoods_title{
+    font-size: 16px;
+    line-height:20px;
+    color: #252525;
+    margin-bottom: 5px;
+}
+.desgoods_tit{
+    color: #808080;
+    font-size: 12px;
+}
+.desgoods_price{
+    margin: 5px 0px;
+}
+.desgoods_price strong{
+    font-size: 24px;
+    font-weight: 700;
+    color:red;
+    margin-right:10px;
+}
+.prod-freight{
+    font-size:12px;
+}
+.space-line {
+    width: 100%;
+    height:5px;
+    background: #f0f0f0;
+}
+.prod-spec{
+    height:50px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    padding:0px 10px;
+}
+.spec-desc{
+    margin-right:20px;
+}
+.prod-shop{
+    display: flex
+}
+.prod-shop .shoppic img{
+    display: inline-block;
+    width:70px;
+    height: 21px;
+    margin-top:10px;
+}
+.popup-shop img{
+    display: inline-block;
+    width: 106px;
+    height: 106px;
+    float: left;
+    position: absolute;
+    left: 10px;
+    top: -15px;
+    z-index: 15;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
+.ant-drawer-body{
+    padding:0px;
+}
+.popup-shop div{
+    margin-left:125px;
+}
