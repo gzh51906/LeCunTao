@@ -163,5 +163,16 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+  "main": "config-overrides.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzh51906/LeCunTao.git"
+  },
+  "author": "weige",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gzh51906/LeCunTao/issues"
+  },
+  "homepage": "https://github.com/gzh51906/LeCunTao#readme"
 }

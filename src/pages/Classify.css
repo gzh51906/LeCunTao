@@ -1,0 +1,82 @@
+.bb{
+    background: red;
+    padding-left: 5%;
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #1f2020;
+}
+Input{
+   width: 85% !important;
+   background-color: #f2f2f2 !important;
+   border-radius: 20px !important;
+   vertical-align: top;
+   border: none;
+   padding-left: 5%;
+   margin-top: 10px !important;
+   float: left;
+}
+span{
+    font-size: 16px;
+    float: left;
+    line-height: 40px;
+    padding: 5px;
+}
+.ClearBFC{
+    clear: both;
+}
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    min-width: 20%;
+    background-color: slategray;
+    color: ghostwhite;
+  }
+  
+  .main-menu  a {
+    color: ghostwhite;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.5em;
+  }
+  .route{
+      margin-top:60px; 
+      /* width: 120px; */
+      padding: 5px;
+      /* background: red; */
+      position: relative;
+      overflow: hidden;
+  }
+  .route li{
+    /* background: darkgoldenrod; */
+    width: 80px;
+    height: 120px;
+    float: left;
+    text-align: center;
+    /* margin:px 10px 0 0;  */
+}
+.route img{
+    width: 80px;
+    height: 80px;
+}
+.route li a{
+    font-size: 17px; 
+    text-align: center;
+}
+  /* .route div{
+      margin-right:0px; 
+      width: 200px;
+      background: darkcyan;
+      position: absolute;
+  } */
+  .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab{
+    margin-bottom: 0px !important;
+    /* background:#F0F0F0 !important; */
+    color: #333 !important;
+  }

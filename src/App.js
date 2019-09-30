@@ -82,7 +82,7 @@ class App extends Component {
     return (
       <div className="App">
         <Menu
-          id="menu"
+          className="menu"
           onClick={this.goto}
           selectedKeys={[this.state.current]}
           mode="horizontal"

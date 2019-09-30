@@ -1,14 +1,14 @@
 @import '~antd/dist/antd.css';
 
-#menu{
-  display:flex;
+.menu{
+  display:flex !important;
   justify-content:space-between;
   position: fixed;
   bottom:0;
   left:0;
 }
+
 .ant-menu-item{
   border-bottom: 0px !important;
   flex: 1 !important;
 }
-
